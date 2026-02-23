@@ -5,19 +5,22 @@ import { Link } from "react-scroll";
 const Hero = () => {
   useEffect(() => {
     const q = gsap.utils.selector(".hero");
-    gsap.fromTo(q([".title", ".rightComp", ".leftComp"]), {
-      y: 0,
-      opacity: 0,
-      stagger: 0.4,
-      ease: "power2.inOut",
-    }, {
-      y: 100,
-      opacity: 100,
-      stagger: 0.4,
-      duration: 1,
-      ease: "power2.inOut",
-
-    });
+    gsap.fromTo(
+      q(".title, .leftComp, .rightComp"),
+      {
+        y: 100,
+        opacity: 0,
+        stagger: 0.4,
+        ease: "power2.inOut",
+      },
+      {
+        y: 0,
+        opacity: 100,
+        stagger: 0.4,
+        duration: 1,
+        ease: "power2.inOut",
+      },
+    );
   }, []);
 
   return (

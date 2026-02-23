@@ -1,7 +1,12 @@
 import React from 'react'
 import { Button } from '../ui/button'
 
-const ProjectCard = ({ val }) => {
+interface Props {
+  val: any;
+  ind: number;
+}
+
+const ProjectCard: React.FC<Props> = ({ val, ind }) => {
   // console.log(val);
   
   return (

@@ -168,6 +168,8 @@ const FloatingChat: React.FC = () => {
               rows={2}
               placeholder="Type your message..."
               value={input}
+              name="message"
+              id="message"
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' ? sendMessageWithText(input) : ''}
               className="w-full resize-none border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"

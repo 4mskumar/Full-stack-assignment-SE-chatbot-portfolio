@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-dotenv
+google-generativeai
+pypdf
+requests
+supabase
+numpy
+scikit-learn
+sse-starlette

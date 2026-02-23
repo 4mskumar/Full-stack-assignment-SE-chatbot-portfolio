@@ -8,3 +8,4 @@ supabase
 numpy
 scikit-learn
 sse-starlette
+python-multipart

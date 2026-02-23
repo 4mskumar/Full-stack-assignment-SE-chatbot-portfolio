@@ -1,6 +1,6 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 const MockupGallery = () => {
     const comp = useRef<HTMLDivElement | null>(null);

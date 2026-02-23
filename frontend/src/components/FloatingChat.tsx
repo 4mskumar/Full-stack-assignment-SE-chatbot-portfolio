@@ -13,7 +13,6 @@ const FloatingChat: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
-  const [showSuggestions, setShowSuggestions] = useState(true);
 
   const predefinedQuestions = [
     "Who is Aditya Kumar?",
@@ -37,7 +36,6 @@ const FloatingChat: React.FC = () => {
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
     setLoading(true);
-    setShowSuggestions(false);
 
     setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
 
@@ -49,6 +47,7 @@ const FloatingChat: React.FC = () => {
       });
 
       const reader = res.body?.getReader();
+      if (!reader) throw new Error("No response body");
       const decoder = new TextDecoder("utf-8");
       let assistantText = "";
 
@@ -84,7 +83,6 @@ const FloatingChat: React.FC = () => {
 
   const handleSuggestionClick = (question: string) => {
     setInput(question);
-    setShowSuggestions(false);
 
     setTimeout(() => {
       sendMessageWithText(question);

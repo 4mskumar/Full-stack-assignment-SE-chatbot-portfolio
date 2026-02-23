@@ -4,7 +4,6 @@ import { Link } from "react-scroll";
 import Hero from '../src/components/HeroComp/Hero'
 import MockupGallery from '../src/components/About/MockupGallery'
 import ProjectDesplay from '../src/components/About/ProjectDesplay'
-import Contact from '../src/components/About/Contact'
 import FooterComp from '../src/components/Footer/FooterComp';
 
 const Home = () => {

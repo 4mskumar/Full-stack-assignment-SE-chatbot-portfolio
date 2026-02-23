@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Button } from '../ui/button'
 
 interface Props {
@@ -14,8 +14,8 @@ const ProjectCard: React.FC<Props> = ({ val, ind }) => {
       <div className="w-full relative overflow-hidden h-full">
         <img
           src={val.imageUrl}
+          alt={String(ind)}
           className="w-full duration-300 transition-all ease-in-out hover:shadow-2xl hover:scale-110 h-full object-cover"
-          alt=""
         />
         <h1 className='text-black z-50 text-2xl font-bold absolute -top-1/2 -left-1/2 translate-x-1/2 translate-y-1/2'>{val.status}</h1>
       </div>
